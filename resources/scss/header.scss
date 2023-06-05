@@ -38,4 +38,17 @@ header{
         }
      }
     }
-}
+    @media screen and (max-width: 900px) {
+        .hamMenu{
+          h1{
+
+            display: block;
+          }
+        }
+        nav{
+         display: none;
+        }
+      }
+
+
+    }
