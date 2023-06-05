@@ -18,3 +18,27 @@ Route::get('/', function () {
     $comics = config('comics');
     return view('partials.home', compact('comics'));
 })->name('home');
+
+
+Route::get('/about-us', function () {
+
+    return view('partials.about');
+})->name('about');
+
+
+Route::get('/contacts', function () {
+
+    return view('partials.contacts');
+})->name('contacts');
+
+
+Route::get('/FAQs', function () {
+
+    return view('partials.FAQ');
+})->name('FAQ');
+
+
+Route::get('/catalogue', function () {
+
+    return view('partials.catalogue');
+})->name('catalogue');

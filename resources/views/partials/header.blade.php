@@ -1,3 +1,10 @@
+@php
+
+$menu = config('all_menus');
+
+@endphp
+
+
 <header>
     <div class="container">
 
@@ -12,26 +19,15 @@
           </div>
           <nav>
             <ul>
-                <li>
+                @foreach ($menu['header_menu'] as $item)
 
-                   <a href="#">Link</a>
+                    <li>
 
-                 </li>
-                <li>
+                        <a href="{{ route($item['name']) }}">{{ $item['name'] }}</a>
 
-                   <a href="#">Link</a>
+                    </li>
 
-                 </li>
-                <li>
-
-                   <a href="#">Link</a>
-
-                 </li>
-                <li>
-
-                   <a href="#">Link</a>
-
-                 </li>
+                @endforeach
             </ul>
         </nav>
         </div>

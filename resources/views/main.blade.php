@@ -13,6 +13,10 @@
     </head>
 
     <body>
+@php
+$menu = config('all_menus');
+
+@endphp
 
         @include('partials.header')
 
