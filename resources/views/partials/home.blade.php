@@ -16,9 +16,22 @@
         </h3>
 
         <div class="card-wrapper">
-          <div class="cardContainer">
+            @foreach ($comics as $item )
+                <div class="cardContainer">
 
-          </div>
+                    <div class="pm-card">
+                        <div class="containerImg">
+                            <img src="{{ $item['thumb'] }}" alt="IMG">
+                        </div>
+
+                        <div class="name">
+                            <h5>{{ $item['title']}}</h5>
+                        </div>
+                    </div>
+
+                </div>
+            @endforeach
+
         </div>
       </div>
       <div class="loadBtn">
