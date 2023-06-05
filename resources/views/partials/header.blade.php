@@ -1,8 +1,4 @@
-@php
 
-$menu = config('all_menus');
-
-@endphp
 
 
 <header>
@@ -23,7 +19,7 @@ $menu = config('all_menus');
 
                     <li>
 
-                        <a href="{{ route($item['name']) }}">{{ $item['name'] }}</a>
+                        <a href="{{ route($item['name']) }}">{{ $item['text'] }}</a>
 
                     </li>
 

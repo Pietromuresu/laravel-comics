@@ -1,3 +1,8 @@
+@php
+    $medias = config('media_links');
+
+@endphp
+
 <footer>
 
     <div class="footerTop">
@@ -7,39 +12,51 @@
              <div>
               <ul>
                 <h4>DC COMICS</h4>
+                @foreach ($menu['header_menu'] as $item)
+
                 <li>
-                  <a href="#">
-                    Link
-                  </a>
+                    <a href="{{ route($item['name']) }}">
+                        {{$item['text']}}
+                    </a>
                 </li>
+                @endforeach
               </ul>
 
               <ul>
                 <h4>SHOP</h4>
+                @foreach ($menu['shop_menu'] as $item)
+
                 <li>
                   <a href="#">
-                    Link
+                    {{$item['text']}}
                   </a>
                 </li>
+
+                @endforeach
+
               </ul>
              </div>
 
               <ul>
                 <h4>DC</h4>
+                @foreach ($menu['dc_menu'] as $item)
                 <li>
                   <a href="#">
-                    Link
+                    {{$item['text']}}
                   </a>
                 </li>
-              </ul>
+                @endforeach
+            </ul>
 
               <ul>
                 <h4>SITES</h4>
+                @foreach ($menu['sites_menu'] as $item)
                 <li>
                   <a href="#">
-                    Link
+                    {{$item['text']}}
                   </a>
                 </li>
+                @endforeach
               </ul>
 
             </div>
@@ -64,36 +81,16 @@
 
             <h3>FOLLOW US</h3>
             <ul>
+                @foreach ($medias as $media)
 
-              <li v-for="(link, index) in mediaLinks" :key="index">
-                <a :href="link.href">
-                  <img src="{{ Vite::asset('/resources/img/footer-facebook.png') }}" alt="ICON">
-                </a>
-              </li>
+                <li>
+                    <a href="{{$media['href']}}" target="_blank">
+                        <img src="{{ Vite::asset('resources/img/' . $media['icon']) }}" alt="ICON">
+                    </a>
+                </li>
+                @endforeach
 
-              <li v-for="(link, index) in mediaLinks" :key="index">
-                <a :href="link.href">
-                  <img src="{{ Vite::asset('/resources/img/footer-facebook.png') }}" alt="ICON">
-                </a>
-              </li>
 
-              <li v-for="(link, index) in mediaLinks" :key="index">
-                <a :href="link.href">
-                  <img src="{{ Vite::asset('/resources/img/footer-facebook.png') }}" alt="ICON">
-                </a>
-              </li>
-
-              <li v-for="(link, index) in mediaLinks" :key="index">
-                <a :href="link.href">
-                  <img src="{{ Vite::asset('/resources/img/footer-facebook.png') }}" alt="ICON">
-                </a>
-              </li>
-
-              <li v-for="(link, index) in mediaLinks" :key="index">
-                <a :href="link.href">
-                  <img src="{{ Vite::asset('/resources/img/footer-facebook.png') }}" alt="ICON">
-                </a>
-              </li>
             </ul>
 
           </div>
