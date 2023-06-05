@@ -1,0 +1,41 @@
+
+header{
+    margin-top: 1rem ;
+    .container{
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img{
+        height: 80px;
+      }
+
+      // .hamMenu{
+      //   display: none;
+      // }
+
+      ul{
+        display: flex;
+        li{
+          margin: 0 10px;
+
+          &:hover,
+          &.active{
+            border-bottom: 5px solid $blue;
+
+            a{
+              color: $blue;
+            }
+          }
+
+          a{
+            line-height: 80px;
+            color: $font-black;
+            text-transform: uppercase;
+            font-size: smaller;
+          }
+        }
+     }
+    }
+}
