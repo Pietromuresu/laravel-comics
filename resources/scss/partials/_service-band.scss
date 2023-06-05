@@ -1,0 +1,39 @@
+.servicesBand{
+
+    @include flexMe(both);
+    min-height: 150px;
+    background-color: $blue;
+    ul{
+      display: flex;
+      li{
+        @include flexMe(vertical);
+        color: white;
+        display: flex;
+        margin: 0 20px;
+        text-transform: uppercase;
+        font-size: small;
+        img{
+          height: 50px;
+          margin-right: 10px;
+        }
+        a{
+          color: white;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      ul{
+        display: block;
+        margin-top: 20px;
+
+        li{
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+  }
