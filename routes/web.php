@@ -39,6 +39,6 @@ Route::get('/FAQs', function () {
 
 
 Route::get('/catalogue', function () {
-
-    return view('partials.catalogue');
+    $comics = config('comics');
+    return view('partials.catalogue', compact('comics'));
 })->name('catalogue');

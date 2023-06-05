@@ -1,30 +1,15 @@
+@php
+    $services = config('our_services');
+@endphp
+
 <div class="servicesBand">
     <ul>
-
-        <li>
-          <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="img">
-          <a href="#"> Service</a>
-        </li>
-
-        <li>
-          <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="img">
-          <a href="#"> Service</a>
-        </li>
-
-        <li>
-          <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="img">
-          <a href="#"> Service</a>
-        </li>
-
-        <li>
-          <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="img">
-          <a href="#"> Service</a>
-        </li>
-
-        <li>
-          <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="img">
-          <a href="#"> Service</a>
-        </li>
+        @foreach ($services as $service)
+            <li>
+                <img src="{{Vite::asset('resources/img/' . $service['img'])}}" alt="img">
+                <a href="#">{{ $service['text'] }}</a>
+            </li>
+        @endforeach
 
     </ul>
 </div>
