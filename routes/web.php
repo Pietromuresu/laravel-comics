@@ -42,3 +42,9 @@ Route::get('/catalogue', function () {
     $comics = config('comics');
     return view('catalogue', compact('comics'));
 })->name('catalogue');
+
+
+Route::get('/product-details', function () {
+
+    return view('layout.product_details');
+})->name('product_details');

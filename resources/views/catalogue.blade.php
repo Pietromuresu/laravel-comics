@@ -8,7 +8,8 @@
         <h1 class="my-4">Our Products</h1>
         <div class="container">
             @foreach ($comics as $item )
-            <div class="pm-cardContainer">
+            <a href="#">
+                <div class="pm-cardContainer">
 
                     <div class="pm-card-cat">
                         <div class="containerImg">
@@ -22,6 +23,7 @@
                     </div>
 
                 </div>
+            </a>
             @endforeach
         </div>
     </div>

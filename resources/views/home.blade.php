@@ -17,6 +17,8 @@
 
         <div class="card-wrapper">
             @foreach ($comics as $item )
+            <a href="{{ route('product_details') }}">
+
                 <div class="cardContainer">
 
                     <div class="pm-card">
@@ -30,6 +32,8 @@
                     </div>
 
                 </div>
+
+            </a>
             @endforeach
 
         </div>
