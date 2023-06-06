@@ -3,7 +3,7 @@
 return [
     [
         "question" => "How Do I pay?",
-        "answer" => "No, you don't",
+        "answer" => "You can do it with a few ears of corn",
         "collapse_count" => "collapseOne"
     ],
     [

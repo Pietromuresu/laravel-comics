@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layout.main')
 
 @php
     $faqs = config('faqs')

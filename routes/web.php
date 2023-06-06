@@ -16,29 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $comics = config('comics');
-    return view('partials.home', compact('comics'));
+    return view('home', compact('comics'));
 })->name('home');
 
 
 Route::get('/about-us', function () {
 
-    return view('partials.about');
+    return view('about');
 })->name('about');
 
 
 Route::get('/contacts', function () {
 
-    return view('partials.contacts');
+    return view('contacts');
 })->name('contacts');
 
 
 Route::get('/FAQs', function () {
 
-    return view('partials.FAQ');
+    return view('FAQ');
 })->name('FAQ');
 
 
 Route::get('/catalogue', function () {
     $comics = config('comics');
-    return view('partials.catalogue', compact('comics'));
+    return view('catalogue', compact('comics'));
 })->name('catalogue');
