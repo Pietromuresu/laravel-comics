@@ -23,11 +23,11 @@
         width: 100%;
 
         img{
-            top: -200px ;
+            top: -230px ;
             left: 0;
             position: absolute;
 
-            height: 180px;
+            height: 200px;
             width: 150px;
             z-index: 1000;
         }
@@ -69,7 +69,7 @@
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
     .row{
-
+        margin-bottom: 100px;
         .col{
             table{
                 td,

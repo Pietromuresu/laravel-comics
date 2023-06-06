@@ -1,5 +1,8 @@
 @extends('layout.main')
 
+@php
+    $services = config('our_services')
+@endphp
 
 @section('content')
 
@@ -64,7 +67,7 @@
     <div class="pm-specifics">
         <div class="container">
 
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col">
                     <table class="table">
                         <thead>
@@ -137,47 +140,22 @@
 
     <div class="services-band w-100 ">
        <div class="row pm-main-row justify-center">
+        @foreach ($services as $service)
+
         <div class="col">
-                <div class="row d-flex justify-between">
-                    <div class="col">
-                        <h3 class="">DIGITAL COMICS</h3>
-                    </div>
-                    <div class="col">
-                        <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    </div>
+            <div class="row d-flex justify-between">
+                <div class="col">
+                    <h3 class="text-uppercase">
+                        {{$service['text']}}
+                    </h3>
                 </div>
-            </div>
-        <div class="col">
-                <div class="row d-flex justify-between">
-                    <div class="col">
-                        <h3 class="">DIGITAL COMICS</h3>
-                    </div>
-                    <div class="col">
-                        <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        <div class="col">
-                <div class="row d-flex justify-between">
-                    <div class="col">
-                        <h3 class="">DIGITAL COMICS</h3>
-                    </div>
-                    <div class="col">
-                        <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        <div class="col">
-                <div class="row d-flex justify-between">
-                    <div class="col">
-                        <h3 class="">DIGITAL COMICS</h3>
-                    </div>
-                    <div class="col">
-                        <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    </div>
+                <div class="col text-end">
+                    <img src="{{ Vite::asset('resources/img/' . $service['img']) }}" alt="">
                 </div>
             </div>
         </div>
+
+        @endforeach
        </div>
     </div>
 @endsection
