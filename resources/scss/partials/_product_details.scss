@@ -66,7 +66,10 @@
 
 .pm-specifics{
     background-color: #F6F6F6;
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
     .row{
+
         .col{
             table{
                 td,
@@ -84,3 +87,39 @@
         }
     }
 }
+
+.services-band{
+    background-color: #F6F6F6;
+
+    .pm-main-row{
+
+        justify-content: center;
+
+        .col{
+
+            max-width: 350px;
+            height: 70px;
+            justify-content: space-between;
+
+
+            .row{
+
+                border-left: 1px solid #8c8c8c;
+
+                .col{
+                    h3{
+                        padding: 10px;
+                        font-size: 14px !important;
+                        color: #8c8c8c;
+                    }
+                    img{
+                        margin: 10px;
+                        height: 40px;
+                        filter:invert(30%);
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -17,7 +17,7 @@
 
         <div class="card-wrapper">
             @foreach ($comics as $item )
-            <a href="{{ route('product_details') }}">
+            <a href="{{ route('product_details', $item['slug']) }}">
 
                 <div class="cardContainer">
 

@@ -44,7 +44,9 @@ Route::get('/catalogue', function () {
 })->name('catalogue');
 
 
-Route::get('/product-details', function () {
-
-    return view('layout.product_details');
+Route::get('/product-details/{slug}', function ($slug) {
+    $comics = config('comics');
+    $product_array = array_filter($comics, fn($item) => $item['slug'] === $slug);
+    $product = $product_array[array_key_first($product_array)];
+    return view('layout.product_details', compact('product'));
 })->name('product_details');

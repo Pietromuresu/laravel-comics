@@ -8,7 +8,7 @@
         <h1 class="my-4">Our Products</h1>
         <div class="container">
             @foreach ($comics as $item )
-            <a href="#">
+            <a href="{{ route('product_details', $item['slug']) }}">
                 <div class="pm-cardContainer">
 
                     <div class="pm-card-cat">
