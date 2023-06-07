@@ -81,19 +81,22 @@
                             <tr>
                                 <td class="w-40">Art by:</td>
                                 <td class="fs-small">
+                                    @foreach ($product['artists'] as $artist)
                                     <a href="#">
 
-                                        {{ implode( ', ', $product['artists']) }}
-                                    </a>
+                                        {{  $artist}}
+                                    </a>,
+                                    @endforeach
                                 </td>
                             </tr>
                             <tr>
                                 <td>Written by:</td>
                                 <td>
+                                    @foreach ($product['writers'] as $writer)
                                     <a href="#">
-
-                                        {{implode( ', ', $product['writers'])}}
-                                    </a>
+                                        {{  $writer}}
+                                    </a>,
+                                    @endforeach
                                 </td>
                             </tr>
 

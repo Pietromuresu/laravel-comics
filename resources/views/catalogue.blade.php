@@ -8,22 +8,12 @@
         <h1 class="my-4">Our Products</h1>
         <div class="container">
             @foreach ($comics as $item )
-            <a href="{{ route('product_details', $item['slug']) }}">
-                <div class="pm-cardContainer">
 
-                    <div class="pm-card-cat">
-                        <div class="containerImg">
-                            <img src="{{ $item['thumb'] }}" alt="IMG">
-                        </div>
+            @include('partials.card',
+                    [
+                        'product' => 'product'
+                    ] )
 
-                        <div class="name">
-                            <h5>{{ $item['title']}}</h5>
-                            <h5>{{ $item['price']}}</h5>
-                        </div>
-                    </div>
-
-                </div>
-            </a>
             @endforeach
         </div>
     </div>
